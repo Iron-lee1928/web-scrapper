@@ -71,3 +71,5 @@ app.run(host="0.0.0.0")
 #12. db[word]=jobs 스크래핑 한 후에 fakeDB에 저장
 #13. render_templeate함수를 리턴하면서, report.html을 렌더링
 #14. csv파일로 저장하고싶다면 export클릭 → writer 를 이용하여 csv파일생성
+
+#내 코드를 내가 까먹음,,
