@@ -3,12 +3,25 @@
 <html>
   <head>
     <title>Job Search</title>
+    <style>
+      div{
+        margin-top:40px;
+        text-align: center;
+         border-style:solid;
+        border-width: 1px;
+  
+      }
+
+      </style>
   </head>
   <body>
-    <h1>Job Search</h1>
+    <div>
+    <h1>일자리 지역 검색</h1>
     <form action="/report">
       <input  method="get" placeholder='Search for a job' required name="word" />
       <button>Search</button>
+      <p> 시,군,구 를 입력해 주세요 예) 평택시,영광군,용산구 </p>
     </form>
+    </div>
   </body>
 </html>

@@ -1,25 +1,43 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Job Search</title>
+    <title>일자리 검색</title>
+    
     <style>
       section{
         display:grid;
         gap:20px;
-        grid-template-columns: repeat(4,1fr);
+        grid-template-columns: repeat(4,1fr);  
+          }
+          body{
+           background-color:#6D9886;
+          }
+      h1{
+        color:#F6D7A7;
+         }
+      h3{
+        color:#F6EABE;
+         }
+         a{
+           color:#C8E3D4;
+         }
+      h4{
+        color:#79B4B7;
+        font-size: 25px;
       }
-
     </style>
-  </head>
+    
+    </head>
+   
   <body>
-    <h1>Search Results</h1>
-    <h3>Found {{resultsNumber}} results for : {{searchingBy}} </h3>
-    <a href ="/export?word={{searchingBy}}">Export to CSV</a>
+    <h1>검색 결과 :)</h1>
+    <h3><{{resultsNumber}}개의 구직정보>지역: {{searchingBy}} </h3>
+    <a href ="/export?word={{searchingBy}}">CSV 파일로 저장하기</a>
     <section>
-      <h4>Title</h4>
-      <h4>Company</h4>
-      <h4>Location</h4>
-      <h4>Link</h4>
+      <h4>모집분야</h4>
+      <h4>회사명</h4>
+      <h4>지역</h4>
+      <h4>홈페이지</h4>
       
       {% for job in jobs %}
         <span>{{job.title}}</span>
