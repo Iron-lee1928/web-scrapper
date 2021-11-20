@@ -1,17 +1,18 @@
 from flask import Flask, render_template,request,redirect,send_file
-from scrapper import get_jobs
-from exporter import save_to_file
+from scrapper import get_jobs #함수호출
+from exporter import save_to_file #함수호출
 app=Flask("Scrapper")
 
 db={}#fake DB
 
 @app.route("/")
 def home():
-  return render_template("potato.html")
-
+  return render_template("iron.html")
+#임의 클라우드 서버 할당 및 데이터 베이스에 자료넣는 공간 생성
 @app.route("/report")
 def report():
   word=request.args.get('word')#arg : /report?args=1&args3=2이런식으로 전달되는것
+
   if word:
     word = word.lower()
     existingJobs = db.get(word)#검색한 word가 db에 있는지 찾아봄
@@ -30,6 +31,7 @@ def report():
     jobs=jobs#report.html에 jobs넘겨주기
   )
 # 에러발생 시키기
+#모든 에러를 다 잡을 수 없음
 @app.route("/export")
 def export():
   try:
